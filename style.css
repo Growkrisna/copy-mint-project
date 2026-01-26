@@ -1,5 +1,35 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
 * {
     box-sizing: 0;
+        margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -8,26 +38,36 @@ body {
 
 
 .container{
-    /* display: flex; */
-    /* flex-direction: column; */
     width: 100%;
     height: 220px;
+    background-image: url(gambar/6072812.jpg);
+    color:antiquewhite
 }
 
-header ul{
+.header ul{
     display: flex;
     gap: 20px;
-    text-decoration: none;
+    padding: 20px;
+    justify-content: end;
+    margin-right: 100px;
+    border-bottom: 1px solid #0F0F0F;
 }
 
-header ul li {
+
+.header ul li {
     text-decoration: none;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
-    align-items: space-between;
+    justify-content: space-between;
+    margin: 0 20px;
+    margin-right: 100px;
+}
+
+.title-nav {
+    display: flex;
+    align-items: center;
 }
 
 nav .nav-list ul{
@@ -35,6 +75,22 @@ nav .nav-list ul{
     gap: 20px;
 }
 
+.nav-list{
+    align-items: space-between;
+    justify-content: center;
+    padding: 20px;
+}
+
 .title {
     font-size: 64px;
+}
+
+.button-order{
+    display: flex;
+    border-radius: 8px;
+    background-color: aliceblue;
+    color: #0F0F0F;
+    padding: 20px 10px 10px 20px;
+    align-items: center;
+    justify-content: center;
 }
