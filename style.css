@@ -79,6 +79,7 @@ nav {
 
 nav .nav-list ul{
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -169,6 +170,8 @@ i {
 
 .link-button {
     display: flex;
+    /* justify-content: center; */
+    align-items: center;
     gap: 24px;
 }
 
@@ -271,4 +274,27 @@ hr {
   text-align: center;
   font-size: 13px;
   color: #777;
+}
+
+
+.download-c {
+    background-color: #343a40;
+    color: #f0f1f3;
+    padding: 10px 16px 10px 16px;
+    border-radius: 4px;
+}
+
+.feature, .release {
+    color: #48ae55;
+
+}
+
+.feature a, .release a {
+    color: #48ae55;
+}
+
+.button-order a {
+    padding: 10px 16px 10px 16px;
+    background-color: #343a40;
+    color: #f0f1f3;   
 }
